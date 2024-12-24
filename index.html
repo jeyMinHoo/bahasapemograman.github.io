@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Informasi mengenai 50 bahasa pemrograman yang digunakan secara rinci">
+    <meta name="author" content="OpenAI">
+    <title>Bahasa Pemrograman</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f1f1f1;
+            color: #333;
+            line-height: 1.6;
+            transition: background-color 0.3s ease-in-out;
+        }
+        header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #2980b9;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+
+        /* Search Bar */
+        .search-container {
+            margin: 30px auto;
+            text-align: center;
+        }
+        .search-input {
+            padding: 12px;
+            width: 90%;
+            max-width: 600px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 50px;
+            outline: none;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .search-input:focus {
+            box-shadow: 0 6px 15px rgba(0, 123, 255, 0.6);
+        }
+
+        /* Horizontal Scroll Container */
+        .programming-languages {
+            display: flex;
+            overflow-x: auto;
+            padding: 30px 20px;
+            gap: 30px;
+            justify-content: flex-start;
+            scroll-snap-type: x mandatory;
+            flex-wrap: nowrap;
+            margin-top: 30px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            scroll-snap-align: start;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+            will-change: transform, opacity;
+        }
+
+        .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .card i {
+            font-size: 50px;
+            color: #2980b9;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+        .card:hover i {
+            transform: rotate(360deg);
+        }
+        .card h3 {
+            font-size: 1.8em;
+            margin: 10px 0;
+            color: #34495e;
+        }
+        .card p {
+            font-size: 1.1em;
+            color: #7f8c8d;
+        }
+
+        /* Features Section (Device, Function, Pros and Cons) */
+        .features {
+            margin-top: 20px;
+            font-size: 1em;
+            text-align: left;
+            color: #34495e;
+        }
+        .features h4 {
+            font-size: 1.3em;
+            margin-top: 15px;
+            color: #2980b9;
+        }
+        .features ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+            border-top: 3px solid #2980b9;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .programming-languages {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+            .search-input {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1> Penjelasan Mengenai Bahasa Pemrograman</h1>
+        <h2>by</h2>
+        <h2>Jeyminhoo</h2>
+        <p>Pelajari lebih lanjut tentang berbagai bahasa pemrograman yang digunakan di dunia ini!</p>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input class="search-input" type="text" id="search" placeholder="Cari bahasa pemrograman...">
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="programming-languages" id="languages-container">
+
+        <!-- Python Card (Existing) -->
+        <div class="card">
+            <i class="fab fa-python"></i>
+            <h3>Python</h3>
+            <p>Python adalah bahasa pemrograman tingkat tinggi yang digunakan dalam pengembangan web, data analysis, machine learning, dan lebih banyak lagi.</p>
+            <div class="features">
+                <h4>Device/Platform:</h4>
+                <ul>
+                    <li>Platform: Web, Desktop, Server, IoT, Mobile</li>
+                    <li>Device: Laptop, Server, Mobile (via Kivy, BeeWare)</li>
+                </ul>
+
+                <h4>Fungsi:</h4>
+                <ul>
+                    <li>Pemrograman Web</li>
+                    <li>Machine Learning dan AI</li>
+                    <li>Data Analysis</li>
+                    <li>Automasi dan Skrip</li>
+                </ul>
+
+                <h4>Kelebihan:</h4>
+                <ul>
+                    <li>Bahasa yang mudah dipelajari dan dibaca.</li>
+                    <li>Ekosistem pustaka yang sangat besar.</li>
+                    <li>Dukungan komunitas yang sangat aktif.</li>
+                </ul>
+
+                <h4>Kekurangan:</h4>
+                <ul>
+                    <li>Performa lebih rendah dibandingkan bahasa seperti C/C++ atau Java.</li>
+                    <li>Keterbatasan dalam pengembangan aplikasi mobile dibandingkan bahasa lain seperti Swift atau Kotlin.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Ruby -->
+        <div class="card">
+            <i class="fas fa-cogs"></i>
+            <h3>Ruby</h3>
+            <p>Ruby adalah bahasa pemrograman dinamis yang terkenal karena kesederhanaannya dan digunakan terutama dalam pengembangan web menggunakan Ruby on Rails.</p>
+            <div class="features">
+                <h4>Device/Platform:</h4>
+                <ul>
+                    <li>Platform: Web, Desktop</li>
+                    <li>Device: Laptop, Server</li>
+                </ul>
+
+                <h4>Fungsi:</h4>
+                <ul>
+                    <li>Pemrograman Web</li>
+                    <li>Automasi</li>
+                    <li>Prototyping</li>
+                </ul>
+
+                <h4>Kelebihan:</h4>
+                <ul>
+                    <li>Bahasa yang sangat elegan dan mudah dipahami.</li>
+                    <li>Kerangka kerja Ruby on Rails sangat produktif untuk pengembangan web.</li>
+                </ul>
+
+                <h4>Kekurangan:</h4>
+                <ul>
+                    <li>Performa rendah dibandingkan dengan bahasa lain seperti Java atau Go.</li>
+                    <li>Lebih terbatas dalam aplikasi di luar pengembangan web.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Kotlin -->
+        <div class="card">
+            <i class="fab fa-java"></i>
+            <h3>Kotlin</h3>
+            <p>Kotlin adalah bahasa pemrograman yang interoperable dengan Java dan digunakan untuk pengembangan aplikasi Android dan aplikasi berbasis JVM lainnya.</p>
+            <div class="features">
+                <h4>Device/Platform:</h4>
+                <ul>
+                    <li>Platform: Android, Web, Desktop</li>
+                    <li>Device: Laptop, Android</li>
+                </ul>
+
+                <h4>Fungsi:</h4>
+                <ul>
+                    <li>Pengembangan Aplikasi Android</li>
+                    <li>Pemrograman Aplikasi Web</li>
+                    <li>Pengembangan Aplikasi Desktop</li>
+                </ul>
+
+                <h4>Kelebihan:</h4>
+                <ul>
+                    <li>Interoperabilitas penuh dengan Java.</li>
+                    <li>Sintaks yang lebih ringkas dan lebih modern dibandingkan Java.</li>
+                </ul>
+
+                <h4>Kekurangan:</h4>
+                <ul>
+                    <li>Lebih baru dan memiliki komunitas lebih kecil dibandingkan Java.</li>
+                    <li>Kurangnya dokumentasi dibandingkan dengan Java.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Go -->
+        <div class="card">
+            <i class="fab fa-golang"></i>
+            <h3>Go</h3>
+            <p>Go, atau Golang, adalah bahasa pemrograman yang dibuat oleh Google untuk mendukung pengembangan aplikasi sistem dan aplikasi server yang efisien.</p>
+            <div class="features">
+                <h4>Device/Platform:</h4>
+                <ul>
+                    <li>Platform: Server, Desktop</li>
+                    <li>Device: Laptop, Server</li>
+                </ul>
+
+                <h4>Fungsi:</h4>
+                <ul>
+                    <li>Pemrograman Sistem</li>
+                    <li>Pengembangan Aplikasi Backend</li>
+                    <li>Microservices</li>
+                </ul>
+
+                <h4>Kelebihan:</h4>
+                <ul>
+                    <li>Performa sangat cepat dan efisien.</li>
+                    <li>Mudah digunakan dan dipelajari.</li>
+                </ul>
+
+                <h4>Kekurangan:</h4>
+                <ul>
+                    <li>Kurangnya dukungan untuk GUI.</li>
+                    <li>Masih terbatas dalam pengembangan aplikasi mobile.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Swift -->
+        <div class="card">
+            <i class="fab fa-apple"></i>
+            <h3>Swift</h3>
+            <p>Swift adalah bahasa pemrograman yang dikembangkan oleh Apple untuk pengembangan aplikasi iOS dan macOS dengan sintaks modern dan aman.</p>
+            <div class="features">
+                <h4>Device/Platform:</h4>
+                <ul>
+                    <li>Platform: iOS, macOS, watchOS, tvOS</li>
+                    <li>Device: Apple Devices</li>
+                </ul>
+
+                <h4>Fungsi:</h4>
+                <ul>
+                    <li>Pengembangan Aplikasi iOS</li>
+                    <li>Pengembangan Aplikasi macOS</li>
+                </ul>
+
+                <h4>Kelebihan:</h4>
+                <ul>
+                    <li>Sintaks yang modern dan aman.</li>
+                    <li>Performa yang cepat dan optimal untuk perangkat Apple.</li>
+                </ul>
+
+                <h4>Kekurangan:</h4>
+                <ul>
+                    <li>Hanya digunakan di platform Apple.</li>
+                    <li>Komunitas yang lebih kecil dibandingkan dengan bahasa lain seperti JavaScript atau Python.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PHP -->
+        <div class="card">
+            <i class="fab fa-php"></i>
+            <h3>PHP</h3>
+            <p>PHP adalah bahasa skrip sisi server yang banyak digunakan untuk pengembangan aplikasi web dinamis.</p>
+            <div class="features">
+                <h4>Device/Platform:</h4>
+                <ul>
+                    <li>Platform: Web Server</li>
+                    <li>Device: Laptop, Server</li>
+                </ul>
+
+                <h4>Fungsi:</h4>
+                <ul>
+                    <li>Pemrograman Web Server-side</li>
+                    <li>Pengembangan Aplikasi Web</li>
+                </ul>
+
+                <h4>Kelebihan:</h4>
+                <ul>
+                    <li>Kompatibilitas dengan berbagai platform server.</li>
+                    <li>Pengembangan web yang cepat dengan CMS seperti WordPress.</li>
+                </ul>
+
+                <h4>Kekurangan:</h4>
+                <ul>
+                    <li>Kode yang berantakan jika tidak dikelola dengan baik.</li>
+                    <li>Performa lebih rendah dibandingkan dengan bahasa lain seperti Go atau Node.js.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Rust -->
+        <div class="card">
+            <i class="fab fa-rust"></i>
+            <h3>Rust</h3>
+            <p>Rust adalah bahasa pemrograman yang fokus pada kecepatan dan keamanan memori tanpa menggunakan garbage collector.</p>
+            <div class="features">
+                <h4>Device/Platform:</h4>
+                <ul>
+                    <li>Platform: Sistem, WebAssembly</li>
+                    <li>Device: Laptop, Server</li>
+                </ul>
+
+                <h4>Fungsi:</h4>
+                <ul>
+                    <li>Pemrograman Sistem</li>
+                    <li>Pengembangan Aplikasi Web dan WebAssembly</li>
+                </ul>
+
+                <h4>Kelebihan:</h4>
+                <ul>
+                    <li>Keamanan memori yang sangat baik tanpa garbage collector.</li>
+                    <li>Performa tinggi seperti C dan C++.</li>
+                </ul>
+
+                <h4>Kekurangan:</h4>
+                <ul>
+                    <li>Kurva pembelajaran yang lebih curam dibandingkan bahasa lain.</li>
+                    <li>Ekosistem pustaka yang lebih kecil dibandingkan dengan bahasa seperti Python atau JavaScript.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TypeScript -->
+        <div class="card">
+            <i class="fab fa-js"></i>
+            <h3>TypeScript</h3>
+            <p>TypeScript adalah bahasa pemrograman yang dikembangkan oleh Microsoft, yang merupakan superset dari JavaScript dengan dukungan untuk tipe statis.</p>
+            <div class="features">
+                <h4>Device/Platform:</h4>
+                <ul>
+                    <li>Platform: Web, Server-side (Node.js)</li>
+                    <li>Device: Laptop, Desktop</li>
+                </ul>
+
+                <h4>Fungsi:</h4>
+                <ul>
+                    <li>Pemrograman Web Front-end</li>
+                    <li>Server-side dengan Node.js</li>
+                </ul>
+
+                <h4>Kelebihan:</h4>
+                <ul>
+                    <li>Memberikan tipe statis pada JavaScript untuk meningkatkan keandalan kode.</li>
+                    <li>Interoperabilitas dengan JavaScript yang baik.</li>
+                </ul>
+
+                <h4>Kekurangan:</h4>
+                <ul>
+                    <li>Harus dikompilasi kembali menjadi JavaScript.</li>
+                    <li>Kurva pembelajaran sedikit lebih curam dibandingkan JavaScript.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Lua -->
+        <div class="card">
+            <i class="fas fa-code"></i>
+            <h3>Lua</h3>
+            <p>Lua adalah bahasa pemrograman ringan yang banyak digunakan dalam pengembangan game dan aplikasi embedded.</p>
+            <div class="features">
+                <h4>Device/Platform:</h4>
+                <ul>
+                    <li>Platform: Game Engines, Embedded Systems</li>
+                    <li>Device: Game Consoles, Embedded Devices</li>
+                </ul>
+
+                <h4>Fungsi:</h4>
+                <ul>
+                    <li>Pemrograman Game</li>
+                    <li>Embedded Systems</li>
+                </ul>
+
+                <h4>Kelebihan:</h4>
+                <ul>
+                    <li>Ringan dan cepat, ideal untuk pengembangan game dan sistem embedded.</li>
+                    <li>Integrasi yang baik dengan aplikasi lain.</li>
+                </ul>
+
+                <h4>Kekurangan:</h4>
+                <ul>
+                    <li>Kurang populer di luar pengembangan game dan embedded systems.</li>
+                    <li>Kurangnya pustaka dan dokumentasi jika dibandingkan dengan bahasa lain.</li>
+                </ul>
+            </div>
+        </div>
+
+         <!-- C# -->
+        <div class="card">
+            <i class="fab fa-microsoft"></i>
+            <h3>C#</h3>
+            <p>C# adalah bahasa pemrograman yang digunakan untuk aplikasi Windows, game dengan Unity, dan aplikasi web dengan ASP.NET.</p>
+            <div class="features">
+                <h4>Device/Platform:</h4>
+                <ul>
+                    <li>Platform: Windows, Web, Mobile</li>
+                    <li>Device: Laptop, Desktop, Mobile</li>
+                </ul>
+
+                <h4>Fungsi:</h4>
+                <ul>
+                    <li>Pengembangan Aplikasi Windows</li>
+                    <li>Game Development dengan Unity</li>
+                    <li>Pengembangan Aplikasi Web</li>
+                </ul>
+
+                <h4>Kelebihan:</h4>
+                <ul>
+                    <li>Dukungan penuh untuk pengembangan aplikasi Windows.</li>
+                    <li>Ekosistem yang luas dan stabil dengan .NET.</li>
+                </ul>
+
+                <h4>Kekurangan:</h4>
+                <ul>
+                    <li>Terbatas pada platform Windows (meskipun ada Mono untuk Linux).</li>
+                    <li>Kurang fleksibel dibandingkan dengan bahasa lain dalam pengembangan cross-platform.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- C++ -->
+        <div class="card">
+            <i class="fab fa-c"></i>
+            <h3>C++</h3>
+            <p>C++ adalah bahasa pemrograman tingkat tinggi yang digunakan dalam pengembangan perangkat lunak yang membutuhkan performa tinggi, seperti sistem operasi dan game.</p>
+            <div class="features">
+                <h4>Device/Platform:</h4>
+                <ul>
+                    <li>Platform: Sistem Operasi, Game</li>
+                    <li>Device: Laptop, Desktop, Console</li>
+                </ul>
+
+                <h4>Fungsi:</h4>
+                <ul>
+                    <li>Pemrograman Sistem</li>
+                    <li>Pengembangan Game</li>
+                    <li>Software Engineering</li>
+                </ul>
+
+                <h4>Kelebihan:</h4>
+                <ul>
+                    <li>Performa sangat cepat dan efisien.</li>
+                    <li>Kontrol penuh atas pengelolaan memori.</li>
+                </ul>
+
+                <h4>Kekurangan:</h4>
+                <ul>
+                    <li>Sulit dipelajari dan digunakan dengan aman.</li>
+                    <li>Pengelolaan memori manual bisa menyebabkan kebocoran memori.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="card">
+            <i class="fab fa-js"></i>
+            <h3>JavaScript</h3>
+            <p>JavaScript adalah bahasa pemrograman yang digunakan dalam pengembangan aplikasi web dan server-side (Node.js), sangat populer dalam pengembangan front-end dan back-end.</p>
+            <div class="features">
+                <h4>Device/Platform:</h4>
+                <ul>
+                    <li>Platform: Web, Server</li>
+                    <li>Device: Laptop, Desktop, Mobile</li>
+                </ul>
+
+                <h4>Fungsi:</h4>
+                <ul>
+                    <li>Pemrograman Web Front-end</li>
+                    <li>Server-side dengan Node.js</li>
+                </ul>
+
+                <h4>Kelebihan:</h4>
+                <ul>
+                    <li>Bahasa pemrograman yang sangat fleksibel untuk front-end dan back-end.</li>
+                    <li>Komunitas besar dan pustaka yang luas.</li>
+                </ul>
+
+                <h4>Kekurangan:</h4>
+                <ul>
+                    <li>Masalah dengan kompatibilitas antar-browser.</li>
+                    <li>Performa lebih rendah dibandingkan dengan bahasa lain seperti C++.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Java -->
+        <div class="card">
+            <i class="fab fa-java"></i>
+            <h3>Java</h3>
+            <p>Java digunakan untuk pengembangan aplikasi Android, aplikasi enterprise, dan aplikasi web.</p>
+            <div class="features">
+                <h4>Device/Platform:</h4>
+                <ul>
+                    <li>Platform: Android, Enterprise, Web</li>
+                    <li>Device: Laptop, Desktop, Mobile</li>
+                </ul>
+
+                <h4>Fungsi:</h4>
+                <ul>
+                    <li>Pengembangan Aplikasi Android</li>
+                    <li>Aplikasi Enterprise</li>
+                    <li>Aplikasi Web</li>
+                </ul>
+
+                <h4>Kelebihan:</h4>
+                <ul>
+                    <li>Dukungan platform Android yang sangat baik.</li>
+                    <li>Keamanan tinggi dan platform independen.</li>
+                </ul>
+
+                <h4>Kekurangan:</h4>
+                <ul>
+                    <li>Performa lebih rendah dibandingkan dengan C++ atau Rust.</li>
+                    <li>Kurva pembelajaran sedikit lebih curam untuk pemula.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SQL -->
+        <div class="card">
+            <i class="fas fa-database"></i>
+            <h3>SQL</h3>
+            <p>SQL digunakan untuk mengelola dan mengquery basis data relasional.</p>
+            <div class="features">
+                <h4>Device/Platform:</h4>
+                <ul>
+                    <li>Platform: Database Servers</li>
+                    <li>Device: Laptop, Desktop</li>
+                </ul>
+
+                <h4>Fungsi:</h4>
+                <ul>
+                    <li>Manajemen Database Relasional</li>
+                    <li>Pemrosesan Data</li>
+                </ul>
+
+                <h4>Kelebihan:</h4>
+                <ul>
+                    <li>Bahasa standar untuk pengelolaan basis data.</li>
+                    <li>Pengolahan data yang efisien dan kuat.</li>
+                </ul>
+
+                <h4>Kekurangan:</h4>
+                <ul>
+                    <li>Tidak fleksibel untuk basis data non-relasional.</li>
+                    <li>Kurang efisien dalam menangani data besar (big data).</li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy;Penjelasan Bahasa Pemrograman By Jeyminhoo. Semua hak dilindungi.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Menambahkan efek visibilitas untuk kartu
+        window.addEventListener("scroll", function() {
+            var cards = document.querySelectorAll('.card');
+            var windowHeight = window.innerHeight;
+            cards.forEach(function(card) {
+                var position = card.getBoundingClientRect().top;
+                if (position < windowHeight - 100) {
+                    card.classList.add('visible');
+                }
+            });
+        });
+
+        // Fungsi pencarian
+        document.getElementById("search").addEventListener("input", function(event) {
+            var searchQuery = event.target.value.toLowerCase();
+            var cards = document.querySelectorAll('.card');
+            cards.forEach(function(card) {
+                var cardTitle = card.querySelector("h3").textContent.toLowerCase();
+                if (cardTitle.includes(searchQuery)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
